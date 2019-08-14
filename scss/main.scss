@@ -1,0 +1,48 @@
+// Variables
+    //Default Styles
+    $default-margin: 0 ;
+    $default-padding: 0 ;
+    $default-boxStyle: border-box ;
+    $default-color-background: white ;
+    $default-fontF: sans-serif ;
+    $default-F-weight: bold ;
+    // Non defaults styles
+    $clock-color-background: #ccc ;
+    $clock-width: 400px ;
+    $clock-height: 175px ;
+    $clock-margin: 100px auto ;
+    $clock-padding: 2.25em ;
+    // Badge styles
+    $badge-width: 100px ;
+    $badge-background-color: #e66357;
+    $badge-padding: 5px 10px ;
+    $badge-text-color: white ;
+//Removing main styles for browers
+* {
+    margin: $default-margin ;
+    padding: $default-padding;
+    box-sizing: $default-boxStyle;
+}
+body{
+    background-color: $default-color-background ;
+}
+#main{
+    background-color: $clock-color-background ;
+    width: $clock-width ;
+    height: $clock-height ;
+    margin: $clock-margin ;
+    position: relative;
+    padding: $clock-padding ;
+    .badge{
+        width: $badge-width ;
+        background: $badge-background-color ;
+        padding: $badge-padding ;
+        font-family: $default-fontF ;
+        font-weight: $default-F-weight ;
+        position: absolute ;
+        text-transform: uppercase ;
+        top: -15px ;
+        left: 40% ;
+        color: $badge-text-color ;
+    }
+}
