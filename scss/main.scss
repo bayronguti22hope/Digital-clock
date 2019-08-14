@@ -6,17 +6,27 @@
     $default-color-background: white ;
     $default-fontF: sans-serif ;
     $default-F-weight: bold ;
+    $defautl-align-text: center ;
+    // $default-background: url("./pattern.png");
     // Non defaults styles
-    $clock-color-background: #ccc ;
-    $clock-width: 400px ;
-    $clock-height: 175px ;
-    $clock-margin: 100px auto ;
-    $clock-padding: 2.25em ;
+    $clock-main-color-background: #ccc ;
+    $clock-main-width: 400px ;
+    $clock-main-height: 175px ;
+    $clock-main-margin: 100px auto ;
+    $clock-main-padding: 2.25em ;
     // Badge styles
     $badge-width: 100px ;
     $badge-background-color: #e66357;
     $badge-padding: 5px 10px ;
     $badge-text-color: white ;
+    // CLock styles
+    $clock-color-background: #eee ;
+    $numbers-font: 'Orbitron', sans-serif;
+    $number-size: 3em ;
+    $clock-height: 100% ;
+    $clock-padding: 0.55em 0em 0em ;
+    $clock-border-radius: 4px ;
+    // Images import
 //Removing main styles for browers
 * {
     margin: $default-margin ;
@@ -24,15 +34,15 @@
     box-sizing: $default-boxStyle;
 }
 body{
-    background-color: $default-color-background ;
+    // background-image: url('/pattern.png');
 }
 #main{
-    background-color: $clock-color-background ;
-    width: $clock-width ;
-    height: $clock-height ;
-    margin: $clock-margin ;
+    background-color: $clock-main-color-background ;
+    width: $clock-main-width ;
+    height: $clock-main-height ;
+    margin: $clock-main-margin ;
     position: relative;
-    padding: $clock-padding ;
+    padding: $clock-main-padding ;
     .badge{
         width: $badge-width ;
         background: $badge-background-color ;
@@ -44,5 +54,15 @@ body{
         top: -15px ;
         left: 40% ;
         color: $badge-text-color ;
+        text-align: $defautl-align-text ;
+    }
+    .clock{
+        text-align: $defautl-align-text ;
+        font-size: $number-size ;
+        height:$clock-height ;
+        padding: $clock-padding ;
+        background: $clock-color-background ;
+        font-family: $numbers-font ;
+        border-radius: $clock-border-radius ;
     }
 }
